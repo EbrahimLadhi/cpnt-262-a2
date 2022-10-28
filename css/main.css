@@ -1,0 +1,83 @@
+:root {
+  --hue: 0;
+  --hue2: calc(var(--hue) + 60);
+
+  --SUN: hsl(var(--hue), 59%, 26%);
+  --TREE: hsl(var(--hue2), 60%, 92%);
+}
+
+body {
+  margin: 0;
+
+  font-size: 30px;
+  font-family: 'island moments', cursive;
+}
+
+.base {
+  background-color:black;
+  color:white;
+}
+
+.SUN-theme {
+  background-color: RGb(252, 150, 1);
+  color: white;
+}
+
+.TREE-theme {
+  background-color: RGB(12, 174, 91);
+  color: white;
+}
+
+.WATER-theme {
+  background-color: RGB(76, 126, 186);
+  color: white;
+}
+
+body.TREE {
+  color: var(--SUN);
+  background-color: var(--TREE);
+}
+
+body.SUN {
+  color: var(--TREE);
+  background-color: var(--SUN);
+}
+
+main {
+  display: block;
+  justify-content: top;
+  align-items: center;
+  flex-direction: top
+  ;
+
+  margin: auto;
+  max-width: flex;
+  min-height: flex;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+label[for=SUN-mode] {
+  display: block;
+  border: 10px solid white;
+  border-radius: .5em;
+  padding: .5em 1em;
+
+  color: white;
+  background: #eee;
+}
+
+label[for=SUN-mode]:hover {
+  background: white;
+}
+
+label[for=SUN-mode]:active {
+  color: white;
+  background-color: white;
+}
+
+input[name=color-theme] {
+  font-size: 35px;
+}
